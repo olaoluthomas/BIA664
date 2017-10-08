@@ -1,0 +1,16 @@
+1. I loaded the required packages
+
+2. I loaded the two datasets
+
+3. I got summary descriptions of each of the two files
+
+4. I checked if contract_id was unique for each row of each file or repeated. I also checked if contract_id in billing shows up in tracking..
+
+5. Seeing that a contract_id may appear more than once in billing (and also in tracking), I tried to merge rows with the same contract_id, case_filed_yr, jurisdiction, etc but different case_type by creating new variables case_type_1, case_type_2, settlement_offer_1, settlement_offer_2, amount_billed_1, amount_billed_2. I intended to do this on the assumption that a client may have one or more cases being worked on by one (or more) attorney(s). I kept each settlement and amount billed separate rather than adding them up because we would lose information as to which case type is more profitable.
+
+I tried the same thing on the tracking file, intending to create hours_billed_1 and hours_billed_2 where case_type differ.
+
+6. I then tried to merge both files using contract_id, case_filed_yr, zip, jurisdiction, assign_atty. I did not expect there to be a perfect match between the two files.
+
+I have about 40,000 rows of data because I haven't figured out the right code to produce the results I want.
+
